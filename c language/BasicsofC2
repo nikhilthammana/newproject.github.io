@@ -1,0 +1,808 @@
+//pattern
+/*
+output: 5
+*
+**
+***
+****
+*****
+
+#include<stdio.h>
+    int main(){
+int N;
+scanf("%d",&N);
+        int i=1;
+while(i<=N)
+{
+    int j=1;
+    while(j<=i)
+    {
+        printf("*");
+        j=j+1;
+    }
+    printf("\n");
+    i=i+1;
+}
+return 0;
+}
+*/
+/*
+output:
+   121
+   12321
+   1234321
+   
+    #include<stdio.h>
+    int main(){
+    int N;
+    scanf("%d",&N);
+    int i=1;
+    while(i<=N)
+    {
+        int j=1;
+        while(j<=i)
+        {
+            printf("%d ",j);
+            j++;
+        }
+        while(j>=1)
+        {
+            printf("%d ",j);
+            j--;
+        }
+        printf("\n");
+        i=i+1;
+    }
+        return 0;
+    }
+    */
+   /*
+   gcd of two numbers:
+   2 =2 
+   4 = 2 4
+   gcd=2
+   4  2 4 
+   8  2 4 8
+   8
+  
+   #include<stdio.h>
+   int main()
+   {
+       int N,M;
+       scanf("%d %d",&N,&M);
+       int b,i=1,ans;
+       if (N>=M)
+       {
+           b=N;
+       }
+       else{
+         b=M;
+       }
+       while(i<=b)
+       {
+           if (N%i==0 && M%i==0)
+           {
+              ans=i; 
+           }
+           i=i+1;
+       }
+       printf("%d",ans);
+       
+   }
+   //
+   output:
+   9 17
+   1
+   */
+    
+  /*
+  pattern
+  n=3
+     *
+    * *
+   * * *
+  
+  #include<stdio.h>
+  int main()
+  {
+      int N;
+      scanf("%d",&N);
+      int i=1;
+      while(i<=N)
+      {
+          int j=N;
+          while(j>=i)
+          {
+              printf(" ");
+              j--;
+          }
+          j=1;
+          while(j<=i)
+          {
+              printf("* ");
+              j=j+1;
+          }
+          printf("\n");
+          i=i+1;
+      }
+      return 0;
+  }
+   */
+/*
+2d arrays
+#include<stdio.h>
+int main()
+{
+  int a[2][2];
+  int i,j;
+  scanf("%d",&a[0][0]);
+  scanf("%d",&a[0][1]);
+  scanf("%d",&a[1][0]);
+  scanf("%d",&a[1][1]);
+  for(i=0;i<2;i++)
+  {
+        for(j=0;j<2;j++)
+        {
+            printf("%d",a[i][j]);
+        }
+
+  }
+    return 0;
+}
+*/
+/* strong number
+//N:check whether the number is strong
+//sum of factorial of digits=N
+
+#include<stdio.h>
+int main()
+{
+    int d;
+    scanf("%d",&d);
+    int N=d;
+    int c=0;
+    int sum=0;
+    if(N==0)
+    {
+        printf("No");
+    }
+    else{
+    while(N>0)
+    {
+        int digit=(int)N%10;
+        int fact=1;int i=1;
+        //
+        while(i<=digit)
+        {
+         fact=fact*i;
+            i=i+1;
+        }
+        sum=sum+fact;
+        N=N/10;
+        }
+    printf("%d\n",sum);
+    if(sum==d)
+    {
+        printf("The N is strong");
+    }
+    else{
+        printf("The N is not strong");
+    }
+    }
+    return 0;
+}
+/*
+145
+The N is strong
+*/
+//strong numbers between 1 to 1000
+/*
+  #include<stdio.h>
+  int main()
+  {
+      int N;
+      scanf("%d",&N);
+      int d=1;
+      while(d<=N)
+      {
+          int sum=0;
+          int i=d;
+          while(i>0)
+          {
+              int digit=i%10;
+              int fact=1;
+              int j=1;
+              while(j<=digit)
+              {
+                  fact=fact*j;
+                  j=j+1;
+              }
+              sum=sum+fact;
+              i=i/10;
+          }
+          //printf("%d",d);
+          if(d==sum)
+          {
+              printf("%d \n",d);
+          }
+          d=d+1;
+
+      }
+  }
+  ouput:
+  1000
+  1 2 145
+*/
+/*
+//lcm of two numbers
+#include<stdio.h>
+int main()
+{
+    int a,b;
+    scanf("%d %d",&a,&b);
+    int maxm;
+    int ans=-1;
+    if(a>=b)
+    {
+        maxm=a;
+    }
+    else{
+        maxm=b;
+    }
+    while(maxm<=a*b)
+    {
+        if(maxm%a==0 && maxm%b==0 && ans==-1)
+        {
+            ans=maxm;
+        }
+        maxm=maxm+1;
+    }
+    printf("%d\n",ans);
+    return 0;
+}
+*/
+//method 2 for lcm
+//24 6
+//max(24,6)==144
+/*
+#include<stdio.h>
+int main()
+{
+    int a,b;
+    scanf("%d %d",&a,&b);
+    int maxm;
+    if (a>=b)
+    {
+        maxm=a;
+    }
+    else{
+        maxm=b;
+    } 
+    int c=a*b;
+    int ans;
+    while(c>=maxm)
+    {
+        if(c%a==0 && c%b==0)
+        {
+            ans=c;
+        }
+        c=c-1;
+    }
+    printf("%d",ans);
+ return 0;
+}
+*/
+//For loop
+/*
+#include<stdio.h>
+int main()
+{
+    for(int i=0;i<3;i++)
+    {
+        printf("Hello Hi\n");
+    }
+    return 0;
+}
+*/
+//nth fibanocii number
+//n=7:13(0,1,1,2,3,5,8,13)
+/*
+#include<stdio.h>
+int main()
+{
+    int N;
+    printf("Enter N value:\n");
+    scanf("%d",&N);
+    int a=0,b=1,c;
+    if(N==0)
+    {
+        c=a;
+    }
+    else if(N==1)
+    {
+        c=b;
+    }
+    else{
+    
+    for(int i=2;i<=N;i++)
+    {
+          c=a+b;
+          a=b;
+          b=c;
+    }
+    }
+    printf("%d",c);
+    return 0;
+}
+//output 
+Enter N value:
+>>>7
+13
+*/
+//print nth fibanocii series
+/*
+#include<stdio.h>
+int main()
+{
+    int N;
+    printf("Enter N value:\n");
+    scanf("%d",&N);
+    int a=0,b=1;
+    printf("%d ",a);
+    printf("%d ",b);
+    for(int i=2;i<=N;i++)
+    {
+        int temp=a+b;
+        printf("%d ",temp); 
+        a=b;
+        b=temp;
+    }
+    
+}
+//output
+Enter N value:
+>>>7
+0 1 1 2 3 5 8 13 
+*/
+//special series
+/*
+#include<stdio.h>
+int main()
+{
+    int N;
+    scanf("%d",&N);
+    int c=0,sum=0;
+    for(int i=1;i<=N;i++)
+    {
+       c=c*10+1;
+        printf("%d ",c);
+        sum=sum+c;
+    }
+    printf("\n");
+    printf("sum is :%d",sum);
+    return 0;
+}
+output:
+5
+1 11 111 1111 11111 
+sum is :12345
+*/
+//fractional term in a series
+/*
+#include<stdio.h>
+int main()
+{
+    int N;
+    scanf("%d",&N);
+    int i;
+    float j=0;
+    for(i=1;i<=N;i++)
+    {
+        j=j+(float)1/i;
+        
+    }
+    printf("%.2f",j);
+}
+//output
+2
+1.50
+*/
+
+//sum of terms 
+// take N
+// x/1!+x^1/1!.......
+//find sum of above terms
+//method 1
+/*
+#include<stdio.h>
+int main()
+{
+    int N,x;
+    scanf("%d %d",&N,&x);
+    int i;
+    double k=0;
+    
+    for(i=0;i<=N;i++)
+    {
+        double s=1;
+        for(int l=1;l<=i;l++)
+        {
+            s=s*x;
+        }
+        double fact=1;
+        for(int j=1;j<=i;j++)
+        {
+           fact=fact*j;
+        }
+        k=k+s/fact;
+        
+        
+    }
+    printf("%lf",k);
+    
+    return 0;
+}
+*/
+
+//optimized solution 
+/*
+#include<stdio.h>
+int main()
+{
+    int N,x;
+    scanf("%d %d",&N,&x);
+    int i;
+    double sum=1;
+    double power=1;
+    double fact=1;
+    
+    for(i=1;i<=N;i++)
+    {
+        //power
+        power=power*x;
+        //fact
+        fact=fact*(i);
+        //sum
+        sum=sum+power/fact;
+     }
+    printf("%lf",sum);
+    
+    return 0;
+}
+*/
+//demo
+/*
+#include<stdio.h>
+int main()
+{
+    int a,b;
+    scanf("%d %d",&a,&b);
+    printf("%d %d",a,b);
+}
+
+int main()
+{
+    for(int i=0;i<=10;i++)
+    {
+    printf("%d",i);
+    }
+}
+*/
+//continue
+/*
+int main()
+{
+    for(int i=0;i<=10;i++)
+    {
+        if(i%2==0)
+        {
+            continue;
+        }
+    printf("%d",i);
+    }
+}
+*/
+/*
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    //int x=ceil(3.5);
+    float x=3.5;
+    int n=x;
+    int y=x+1.0;
+    printf("%d %d",y,n);
+    
+}
+*/
+//12345
+//54321
+/*
+#include<stdio.h>
+int main()
+{
+    int N;
+    scanf("%d",&N);
+    int reverse;
+    while(N>0)
+    {
+        int digit=N%10;
+        reverse=digit+reverse*10;
+        N=N/10;
+    }
+    printf("%d",reverse);
+}
+
+*/
+/*
+#include <stdio.h>
+int main(void) {
+    // your code goes here
+    int N;
+    scanf("%d",&N);
+    for(int i=0;i<N;i++)
+    {
+        int T;
+        scanf("%d",&T);
+        int sum=0;
+        for(int j=0;j<T;j++)
+        {
+            int A;
+            scanf("%d",&A);
+            int count=0;
+            while(A)
+            {
+                A=A/10;
+                count=count+1;
+            }
+            sum=sum+count;
+        }
+         int b=1;
+        while(b<=sum)
+        {
+           if (sum%b==0)
+           {
+               b=b+1;
+           }
+        }
+        if(b==2)
+        {
+            printf("Yes");
+        }
+        else
+        {
+            printf("No");
+        }
+        
+    }
+    return 0;
+}
+*/
+// maximum element in an array
+/*
+#include<stdio.h>
+int main()
+{
+    int a[6];
+    for(int i=0;i<6;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    for(int j=0;j<6;j++)
+    {
+        printf("%d",a[j]);
+    }
+    int max=0;
+    for(int i=0;i<6;i++)
+    {
+        if(a[i]>max)
+        {
+            max=a[i];
+        }
+    }
+    printf("\n");
+    printf("%d",max);
+    return 0;
+}
+*/
+/*
+sum of numbers
+#include<stdio.h>
+int main()
+{
+    int size;
+    scanf("%d",&size);
+    int arr[size];
+    for(int i=0;i<size;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    int sum=0;
+    for(int j=0;j<size;j++)
+    {
+        printf("%d",arr[j]);
+        sum=sum+arr[j];
+        
+    }
+    printf("\n");
+    printf("%d",sum);
+    return 0;
+}
+*/
+// copy of array elements in another array
+//[1,2,3,4,5,6, , , ,]//9
+// 0 1 2 3 4 5 6 7 8 9
+// 1 2 3 7 4 5 6
+//inserting an element at index with out deleting previous elements
+/*
+#include<stdio.h>
+int main()
+{
+    int N;//9
+    scanf("%d",&N);
+    int arr[N];//9--array 9 elements size
+    int k;//array store the elements upto this index arr[5]
+    scanf("%d",&k);
+    for(int i=0;i<k;i++)
+    {
+        scanf("%d",&arr[i]);//0 1 2 3 4 5
+    }
+    int x, index;// at index 2 we have to insert 6
+    scanf("%d",&index);//2
+    scanf("%d",&x);// 6 
+    
+    for(int i=k-1;i>=index;i--)// 5,4,3
+    {
+        arr[i+1]=arr[i];
+    }
+    /*
+    5
+    arr[6]=arr[5];
+    4
+    arr[5]=arr[4];
+    3
+    arr[4]=arr[3];
+    2
+    arr[3]=arr[2];
+    
+    
+    */
+/*
+    arr[index]=x;
+    for(int i=0;i<N;i++)
+    {
+        printf("%d ",arr[i]);
+    }
+    
+}
+*/
+//deleting the element in an array with out deleting previous elements
+// array size 9
+// store upto k size in array(k=6)
+// 10 20 30 40 50 60 
+// deleting the element at second index
+// output 10 20 40 50 60
+/*
+#include<stdio.h>
+int main()
+{
+    int N;
+    scanf("%d",&N);
+    int arr[N];
+    int k;
+    scanf("%d",&k);
+    for(int i=0;i<k;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    //printing the elements in an array
+    printf("array before deleting  the elements\n");
+    for(int i=0;i<k;i++)
+    {
+        printf("%d",arr[i]);
+    }
+    printf("\n");
+    printf("next");
+    int index;
+    scanf("%d",&index);
+           printf("deleting index value%d\n",index);
+    for(int i=index+1;i<k;i++)
+    {
+        arr[i-1]=arr[i];
+    }
+    /*
+    0 1 2 3 4 5
+    3
+    arr[2]=arr[3];
+    4
+    arr[3]=arr[4];
+    5
+    arr[4]=arr[5];
+    */
+/*
+    for(int i=0;i<N;i++)
+    {
+        printf("%d",arr[i]);
+    }
+    
+}
+*/
+//frequency of an element
+/*
+#include<stdio.h>
+int main()
+{
+    int N;
+    scanf("%d",&N);
+    int arr[N];
+    for(int i=0;i<=N;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    int x;
+    scanf("%d",&x);
+    int count=0;
+    for(int i=0;i<=N;i++)
+    {
+        if(arr[i]==x)
+        {
+            count=count+1;
+        }
+            
+    }
+    printf("%d",count);
+}
+*/
+//frequency of every element in an array
+/*
+#include<stdio.h>
+int main()
+{
+    int N;
+    scanf("%d",&N);
+    int arr[N];
+    for(int i=0;i<=N;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    for(int j=0;j<=N;j++)
+    {
+        int count=0; 
+        for(int k=0;k<=N;k++)
+        {
+            if(arr[j]==arr[k])
+            {
+                count=count+1;
+            }
+        }
+        printf("%d's count is :%d\n",arr[j],count);
+    }
+}
+/*
+output
+>>>8
+>>>2 2 4 4 6 7 8 6 7
+2's count is :2
+2's count is :2
+4's count is :2
+4's count is :2
+6's count is :2
+7's count is :2
+8's count is :1
+6's count is :2
+7's count is :2
+*/
+/*
+#include<stdio.h>
+int main()
+{
+    int N;
+    scanf("%d",&N);
+    
+}
+*/
+
+
+
+
+       
