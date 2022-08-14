@@ -1,1 +1,1255 @@
+/* 
+output
+helloworld 
+
+#include<stdio.h>
+int main()
+{
+    printf("Hello world");
+    return 0;
+}
+*/
+
+
+//casing matters
+/*
+#include<stdio.h>
+int main()
+{
+    int a=5,A=6;
+    printf("%d %d",a,A);
+    return 0;
+}
+output
+5 6
+*/
+
+//to know the size of data type
+/*
+#include<stdio.h>
+#include<limits.h>
+int main()
+{
+    int a,b;
+    a=INT_MIN;
+    b=INT_MAX;
+    printf("%d %d",a,b);
+    return 0;
+}
+output
+-2147483648 2147483647
+*/
+
+//char size
+/*
+#include<stdio.h>
+#include<limits.h>
+int main()
+{
+    int a,b;
+    a=CHAR_MAX;
+    b=CHAR_MIN;
+    printf("%d %d",a,b);
+    return 0;
+}
+*/
+/* INTEGER OVER FLOW
+#include<stdio.h>
+int main()
+{
+    int a=2147483648;
+    printf("%d",a);
+    return 0;
+}
+output:
+-2147483648
+because of the integer overflow
+*/
+
+//declaring of  data types
+/*
+INTEGER:
+ INT-%d,LONG INT-%ld,LONG LONG-%lld;
+
+FLOAT:
+ FLOAT-%f,DOUBLE-%lf,LONG DOUBLE-%llf;
+ 
+CHAR;
+*/
+
+//type casting
+//int to float
+/*
+#include<stdio.h>
+int main()
+{
+    int a=5;
+    printf("%f \n",(float)a);//float
+    int b=5.7685;
+    printf("%f \n",a);//float
+    int c=5.34627;
+    printf("%d \n",a);//integer
+    return 0;
+}
+//output
+
+5.000000 
+5.000000 
+5 
+*/
+//float to int
+/*
+#include<stdio.h>
+int main()
+{
+    float a=5.9;
+    float b=9;
+    printf("%d %d",(int)a,(int)b);
+}
+output:
+5 9
+*/
+
+//ASCII VALUE
+/*
+#include<stdio.h>
+int main()
+{
+    int a=65;
+    printf("%c \n",a);
+    char b='A';
+    printf("%d \n",b);
+    printf("byte:%d",sizeof(char));
+    return 0;
+}
+output:
+A 
+65 
+byte:1
+*/
+
+//precison issues
+/*
+#include<stdio.h>
+int main()
+{
+    double a=12.1234567;
+    printf("%f \n",a);
+    printf("%.3f \n",a);
+    printf("%lf \n",a);
+    return 0;
+}
+output:
+12.123457 
+12.123 
+12.123457 
+*/
+
+//printing formats
+/*
+#include<stdio.h>
+int main()
+{
+    int year=1990;
+    int month=02;
+    int date=06;
+    printf("%d-%d-%d",year,month,date);
+    return 0;
+}
+output:
+1990-2-6
+*/
+
+//printing multiplication table
+
+/*
+#include<stdio.h>
+int main()
+{
+    int a=2,b=1,c;
+    char v='x';
+    printf("%d%c%d=%d \n",a,v,b,a*b);
+    b=b+1;
+    printf("%d%c%d=%d \n",a,v,b,a*b);
+    b=b+1;
+    printf("%d%c%d=%d \n",a,v,b,a*b);
+    b=b+1;
+    printf("%d%c%d=%d \n",a,v,b,a*b);
+    return 0;
+}
+output:
+2x1=2 
+2x2=4 
+2x3=6 
+2x4=8 
+*/
+
+//reading input
+/*
+#include<stdio.h>
+int main()
+{
+    int a;
+    scanf("%d",&a);
+    printf("%d",a);
+    return 0;
+}
+output:
+5
+5
+*/
+/*
+#include<stdio.h>
+int main()
+{
+    int a,b;
+    float c;
+    scanf("%d %d %f",&a,&b,&c);
+    printf("%d %d %f",a,b,c);
+    return 0;
+}
+output:
+10 20 3.7
+10 20 3.700000
+*/
+
+//Reading two integers from user and print sum division substraction divison
+/*
+#include<stdio.h>
+int main()
+{
+  int a,b,c;
+  printf("Enter a and b values");
+  scanf("%d %d",&a,&b);
+  c=a+b;
+  printf("sum is:%d\n",c);
+  c=a-b;
+  printf("sub is:%d\n",c);
+  c=a*b;
+  printf("Mul is:%d\n",c);
+  c=a/b;
+  printf("div is:%d\n",c);
+  
+  return 0;
+}
+output:
+Enter a and b values>>>25 5
+sum is:30
+sub is:20
+Mul is:125
+div is:5
+*/
+
+//logical operators
+/*
+#include<stdio.h>
+int main()
+{
+    int a=5 ,b=6;
+    if(a>b)
+    {
+        printf("True");
+    }
+    else{
+        printf("False");
+    }
+    return 0;
+}
+output:
+False
+*/
+/*
+#include<stdio.h>
+int main()
+{
+    int a=8 ,b=6,c=7;
+    int d=a>b && c>b;
+    printf("%d",d);
+    
+    return 0;
+}
+output:
+1
+*/
+/*
+#include<stdio.h>
+int main()
+{
+    int a=8 ,b=6,c=7;
+    int d=a>b || c>b;
+    printf("%d",d);
+    
+    return 0;
+}
+output:
+1
+ */
+//modulo operator
+/*
+#include<stdio.h>
+int main()
+{
+    int x,y;
+    scanf("%d %d",&x,&y);
+    //dividend=divisor*quotinet+remainder
+    //remainder=dividend-divisor*quotient
+    int q=x/y;
+    int r=x-y*q;
+    printf("%d\n",r);
+    return 0;
+}
+output:
+5 6
+5
+*/
+/*
+#include<stdio.h>
+int main()
+{
+    int x,y;
+    scanf("%d %d",&x,&y);
+    printf("%d",x%y);
+    return 0;
+}
+output:
+5 6
+5
+*/
+
+//increment and decrement operator
+/*
+#include<stdio.h>
+int main()
+{
+    int a=5;
+    a++;
+    printf("%d",a);
+}
+output:
+6
+*/
+/*
+#include<stdio.h>
+int main()
+{
+    int a=5;
+    int b=a++;
+    printf("%d \n",a);
+    printf("%d",b);
+}
+output:
+6 
+5
+*/
+/*
+#include<stdio.h>
+int main()
+{
+    int a=5;
+    int n=5;
+    int b=a++ + ++a;
+    int c=n++ + n++;
+    printf("%d \n",b);
+    printf("%d",c);
+}
+output:
+12 
+11
+*/
+/*
+#include<stdio.h>
+int main()
+{
+    int a=5;
+    printf("%d",a++);
+}
+output:
+5
+*/
+
+//swapping two variables
+/*
+#include<stdio.h>
+int main()
+{
+    int a=5;
+    int b=6;
+    int temp;
+    temp=a;
+    a=b;
+    b=temp;
+    printf("%d\n",a);
+    printf("%d\n",b);
+}
+output:
+6
+5
+*/
+//2nd method 
+/*
+#include<stdio.h>
+int main()
+{
+    int a=5;
+    int b=6;
+    int temp;
+    a=a+b;
+    b=a-b;
+    a=a-b;
+    printf("%d\n",a);
+    printf("%d\n",b);
+    int c=6;
+    int d=7;
+    c=c*d;
+    d=c/d;
+    c=c/d;
+    printf("%d\n",c);
+    printf("%d\n",d);
+    printf("bitwise\n");
+    int e=9;
+    int f=5;
+    e=e^f;
+    f=e^f;
+    e=e^f;
+    printf("%d\n",e);
+    printf("%d\n",f);
+    return 0;
+}
+output:
+6
+5
+7
+6
+bitwise
+5
+9
+*/
+//loops
+/*
+#include<stdio.h>
+int main()
+{
+    int a=5;
+    int i=0;
+    while(i<=a)
+    {
+        printf("Hello world\n");
+        i=i+1;
+    }
+}
+output:
+Hello world
+Hello world
+Hello world
+Hello world
+Hello world
+Hello world
+*/
+
+/*
+#include<stdio.h>
+int main(){
+int b=0;
+while(b!=5)
+{
+    printf("Yes %d\n",b);
+    b++;
+}
+}
+
+output:
+Yes 0
+Yes 1
+Yes 2
+Yes 3
+Yes 4
+*/
+
+//natural number
+/*
+#include<stdio.h>
+int main()
+{
+    int a=10;
+    int i=1;
+    while(i>0 && i<=10)
+    {
+        printf("%d \n",i);
+        i=i+1;
+    }
+}
+output:
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+*/
+//program to print pattern like this 1->2->3->4...
+/*
+#include<stdio.h>
+int main()
+{
+    int a=10;
+    int i=1;
+    while(i<=a)
+    {
+       if (i==a)
+       {
+           printf("%d",i);
+       }
+        else{
+            printf("%d->",i);
+        }
+        i=i+1;
+    }
+    return 0;
+}
+output:
+1->2->3->4->5->6->7->8->9->10
+*/
+//natural numbers sum
+/*
+#include<stdio.h>
+int main()
+{
+    int a=10;
+    int sum=0;
+    int i=1;
+    while(i<=a)
+    {
+        sum=sum+i;
+        i=i+1;
+    }
+    printf("%d",sum);
+}
+output:
+55
+*/
+//even and odd
+/*
+#include<stdio.h>
+int main()
+{
+    int N=1,i=0;
+    while(i<=3)
+    {
+      printf("%d",N);
+      N=N+2;
+      i=i+1;
+    }
+}
+output:
+1357
+*/
+/*
+#include<stdio.h>
+int main()
+{
+    int N=5,i=2;
+    while(N--)
+    {
+      printf("%d",i);
+      i=i+2;
+    }
+}
+output:
+246810
+*/
+//printing multiplication table
+/*
+#include<stdio.h>
+int main()
+{
+    int a=2;
+    int i=1;
+    while(i<=10)
+    {
+        printf("%d x %d =%d \n",a,i,a*i);
+        i=i+1;
+    }
+}
+output:
+2 x 1 =2 
+2 x 2 =4 
+2 x 3 =6 
+2 x 4 =8 
+2 x 5 =10 
+2 x 6 =12 
+2 x 7 =14 
+2 x 8 =16 
+2 x 9 =18 
+2 x 10 =20 
+*/
+
+//factorial of a given number
+/*
+#include<stdio.h>
+int main()
+{
+    int N=5,i=1;
+    int fact=1;
+    while(i<=N)
+    {
+        fact=fact*i;
+        i=i+1;
+    }
+    printf("%d",fact);
+}
+output:
+120
+*/
+//reverse of digits
+/*
+#include<stdio.h>
+int main()
+{
+    int N=1234;
+    int sum=0;
+    while(N>0)
+    {
+       int A=N%10;
+       sum=sum*10+A;
+       N=N/10;
+        
+    }
+    printf("%d",sum);
+}
+output:
+4321
+*/
+//digits pattern
+/*
+3 
+37 
+370 
+3709 
+37098 
+370987 
+#include<stdio.h>
+int main()
+{
+    int N=370987;
+    int x=1;
+    while(N/x>9)
+    {
+      x=x*10;
+    }
+    while(x)
+    {
+      printf("%d \n",N/x);
+      x= x/10;
+    }
+    
+}
+*/
+
+/*
+
+121
+12321
+1234321
+*/
+/*
+#include<stdio.h>
+int main()
+{
+    int N=3;
+   int  i=1;
+    while(i<=N)
+    {
+       int j=1;
+       while(j<=i)
+       {
+           printf("%d",j);
+           j=j+1;
+       }
+        while(j>=1)
+        {
+            printf("%d",j);
+            j--;
+        }
+        printf("\n");
+        i=i+1;
+    }
+}
+output:
+121
+12321
+1234321
+*/
+/*
+#include<stdio.h>
+int main()
+{
+    int a=5;
+    int i=0;
+    while(i<a)
+    {
+        int j=0;
+       while(j<=i)
+       {
+           printf("* ");
+           j=j+1;
+       }
+        printf("\n");
+        i=i+1;
+    }
+}
+output:
+* 
+* * 
+* * * 
+* * * * 
+* * * * * 
+*/
+
+//All factors of N 
+//prime number testing
+/*
+#include<stdio.h>
+int main()
+{
+    int N;
+    scanf("%d",&N);
+    int i=1;
+    int count=0;
+    printf("factors of %d:",N);
+    while(i<=N)
+    {
+       if(N%i==0)
+       {
+           printf("%d",i);
+           count=count+1;
+       }
+        i=i+1;
+    }
+    printf("\n");
+    if(count==2)
+    {
+        printf("prime number");
+    }
+    else{
+        printf("not prime number");
+    }
+}
+output:
+6
+factors of 6:1236
+not prime number
+*/
+//sum of digits of N
+/*
+#include<stdio.h>
+int main()
+{
+    int N;
+    scanf("%d",&N);
+    int sum=0;
+    while(N>0)
+    {
+        int A=N%10;
+        sum=sum+A;
+        N=N/10;
+    }
+    printf("the sum is %d",sum);
+}
+output:
+12345
+the sum is 15
+*/
+
+//pattern
+/*
+#include<stdio.h>
+int main()
+{
+    int N=123456;
+    while(N!=0)
+    {
+        printf("%d\n",N);
+        N=N/10;
+        
+    }
+}
+
+output:
+123456
+12345
+1234
+123
+12
+1
+*/
+/*
+
+// predict the output
+
+#include<stdio.h>
+int main()
+{
+    int N=3;
+    int i=1;
+    while(i<=N)
+    {
+        int j=1;
+        while(j<=i)
+        {
+            int k=1;
+            while(k<=j)
+            {
+                printf("%d ",k);
+                k=k+1;
+            }
+            printf("\n");
+            j=j+1;
+        }
+        printf("*****\n");
+        i=i+1;
+    }
+    return 0;
+}
+output:
+1 
+*****
+1 
+1 2 
+*****
+1 
+1 2 
+1 2 3 
+*****
+*/
+
+//pyramid pattern
+/*
+#include<stdio.h>
+int main()
+{
+    int N;
+    scanf("%d",&N);
+    int i=1;
+    while(i<=N)
+    {
+        int j=1;
+        while(j<=N-i)
+        {
+            printf(" ");
+            j=j+1;
+        }
+        int k=1;
+        while(k<=i)
+        {
+            printf("* ");
+            k=k+1;
+        }
+        printf("\n");
+        i=i+1;
+    }
+}
+output:
+5
+    * 
+   * * 
+  * * * 
+ * * * * 
+* * * * * 
+*/
+//prime number
+/*
+#include<stdio.h>
+int main()
+{
+    int N;
+    scanf("%d",&N);
+    int flag=0;
+    int i=2;
+    while(i<N)
+    {
+        if(N%i==0)
+        {
+            flag=1;
+            break;
+        }
+    }
+    if(flag==0)
+    {
+        printf("prime number");
+    }
+    else{
+        printf("Not prime number");
+    }
+}
+*/
+
+//strong number
+/*
+#include<stdio.h>
+int main()
+{
+    int V;
+    scanf("%d",&V);
+    int N=V;
+    int sum=0;
+    while(N>0)
+    {
+        int A=N%10;
+        int fact=1;
+        int j=1;
+        while(j<=A)
+        {
+            fact=fact*j;
+            j=j+1;
+        }
+        sum=sum+fact;
+        N=N/10;
+    }
+    if(sum==V)
+    {
+        printf("strong");
+    }
+    else{
+        printf("Not");
+    }
+}
+output:
+145
+strong
+*/
+
+//strong number between range
+/*
+#include<stdio.h>
+int main()
+{
+    int start;
+    int end;
+    scanf("%d %d",&start,&end);
+    while(start<=end)
+    {
+        int dup=start;
+        int sum=0;
+        while(dup>0)
+        {
+          int A=dup%10;
+          int fact=1;
+          int j=1;
+        while(j<=A)
+        {
+            fact=fact*j;
+            j=j+1;
+        }
+        sum=sum+fact;
+        dup=dup/10;
+        }
+        if(start==sum)
+        {
+        printf("strong: %d\n",start);
+        }  
+        start=start+1;
+    }
+}
+output:
+1 1000
+strong: 1
+strong: 2
+strong: 145
+*/
+
+//GCD OR HCF
+//HIGHEST COMMON FACTOR
+// 2 6
+/*
+#include<stdio.h>
+int main()
+{
+    int a=2,b=6;
+    int d;
+    if(a<=b)
+    {
+       d=a; 
+    }
+    else{
+        d=b;
+    }
+    int x=0,i=1;
+    while(i<=d)
+    {
+        if(a%i==0 && b%i==0)
+        {
+            x=i;
+        }
+       i=i+1; 
+    }
+    printf("%d",x);
+}
+output:
+2
+*/
+//lcm-least common multiple
+//5
+//7
+//high>=lcm<=5*7
+//7>=lcm<=35
+/*
+#include<stdio.h>
+int main()
+{
+    int a,b;
+    scanf("%d %d",&a,&b);
+    int flag=1;
+    int prod=a*b;
+    int high;
+    if (a>=b)
+    {
+        high=a;
+    }
+    else{
+        high=b;
+    }
+    int i=high;
+    while(i<=prod)
+    {
+    while(i%a==0 && i%b==0 && flag==1)
+    {
+        printf("%d",i);
+        flag=flag+1;
+    }
+        i=i+1;
+    }
+}
+output:
+8 9
+72
+*/
+
+//break
+/*
+#include<stdio.h>
+int main()
+{
+    int a=5,i=0;;
+    while(i<5)
+    {
+        if(i==3)
+        {
+            break;
+        }
+        printf("welcome\n");
+        i=i+1;
+    }
+}
+*/
+
+//for loop
+
+/*
+#include<stdio.h>
+int main()
+{
+    int N=3;
+    for(int i=0;i<=N;i++)
+    {
+        printf("Welcome to programming\n");
+    }
+}
+output:
+Welcome to programming
+Welcome to programming
+Welcome to programming
+Welcome to programming
+*/
+
+//Nth fibonacii number
+/*
+#include<stdio.h>
+int main()
+{
+    int N=6;
+    int first=0;
+    int second=1;
+    if(N==0)
+    {
+        printf("1");
+    }
+    else{
+    printf("0 ");
+    for(int i=2;i<=N;i++)
+    {
+        printf("%d ",second);
+        int temp=first+second;
+        first=second;
+        second=temp;
+    }
+    }
+    printf("%d",second);
+}
+output:
+0 1 1 2 3 5 8
+8
+*/
+
+//special series
+//1 11 111 1111
+//12345
+/*
+#include<stdio.h>
+int main()
+{
+    int N=6;
+    int sum=1;
+    int total=0;
+    for(int i=1;i<=N;i++)
+    {
+        printf("%d ",sum);
+        total=total+sum;
+        sum=sum*10+1;
+    }
+    printf("\n");
+    printf("%d",total);
+}
+*/
+
+//special series
+//1+1/2+1/3+1/4+1/5....,
+
+/*
+#include<stdio.h>
+int main()
+{
+    int N=10;
+    double sum=1;
+    for(int i=1;i<=N;i++)
+    {
+       float b=1/i;
+       sum=sum+b; 
+    }
+    printf("%lf",sum);
+    return 0;
+}
+*/
+
+//sum of terms:::: 1+x+x^2/2!+x^3/3!......
+/*
+#include<stdio.h>
+int main()
+{
+    int N,x;
+    scanf("%d %d",&N,&x);
+    double sum=1;
+    for(int i=1;i<=N;i++)
+    {
+        int fact=1;
+        int pow=1;
+        for(int j=1;j<=i;j++)
+        {
+            fact=fact*j;
+            pow=pow*x;
+        }
+        sum=sum+pow*1.0/fact;
+    }
+    printf("%lf",sum);
+}
+
+output:
+2 1
+2.500000
+*/
+
+//nested loop
+/*
+11
+****
+21
+22
+****
+31
+32
+33
+****
+*/
+/*
+#include<stdio.h>
+int main()
+{
+    int N=5;
+    for(int i=1;i<=N;i++)
+    {
+        for(int j=1;j<=i;j++)
+        {
+                printf("%d",i);
+                printf("%d",j);
+            printf("\n");
+        }
+        printf("*****\n");
+    }
+}
+*/
+
+//continue
+/*
+#include<stdio.h>
+int main()
+{
+    int N=7;
+    for(int i=0;i<=N;i++)
+    {
+        if(i==4)
+        {
+            continue;
+            
+        }
+        printf("%d ",i);
+    }
+}
+
+output:
+0 1 2 3 5 6 7 
+    */
+
+//Math functions
+
+/*
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    float a=5.4;
+    printf("%f \n",floor(a));
+    printf("%f \n",round(a));
+    printf("%f \n",ceil(a));
+    int b=4;
+    printf("%lf \n",sqrt(b));
+    //pow
+    int x=pow(2,3);
+    printf("%d \n",x);
+    //fabs from floating abs
+    printf("%lf",fabs(-9.5));
+}
+output:
+5.000000 
+5.000000 
+6.000000 
+2.000000 
+8 
+9.500000
+*/
+
+//for abs we need to use stdlib.h
+/*
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+    int N=-9;
+    printf("%d",abs(N));
+}
+output:
+9
+*/
 
